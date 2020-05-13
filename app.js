@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
 
-app.get('/', (req, res) => {
-  let nombre = req.query.nombre || "desconocido"
+app.get('/makers/:nombre', (req, res) => {
+  let nombreInicial = req.params.nombre || "desconocido"
+  let nombre = nombreInicial.charAt(0).toUpperCase() + nombreInicial.slice(1).toLowerCase()
+
   res.send(`<h1>Hola ${nombre}!</h1>`);
 });
 
