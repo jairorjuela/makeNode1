@@ -1,0 +1,2 @@
+ignore all logfiles and tempfiles.
+*.node_nodules
